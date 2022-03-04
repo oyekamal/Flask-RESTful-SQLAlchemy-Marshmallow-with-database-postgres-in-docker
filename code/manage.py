@@ -6,9 +6,9 @@ from flask_migrate import Migrate
 
 from app import blueprint
 from app.main import create_app, db
-from app.main.model import user, blacklist
+from app.main.model import user, blacklist, kamal
 
-app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
+app = create_app('dev')
 app.register_blueprint(blueprint)
 
 app.app_context().push()
@@ -21,8 +21,8 @@ migrate = Migrate(app, db)
 
 
 # @manager.command
-def run():
-    app.run()
+# def run():
+#     app.run()
 
 
 # @manager.command

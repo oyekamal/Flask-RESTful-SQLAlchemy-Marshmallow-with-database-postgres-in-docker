@@ -20,6 +20,22 @@ Make sure to run the initial migration commands to update the database.
     > python manage.py db upgrade
 
 
+
+
+    export FLASK_APP=manage.py
+    flask db init
+    
+    flask db migrate
+    flask db upgrade
+
+if you face any problem.
+ 
+    flask db revision --rev-id e39d16e62810
+    flask db migrate
+    flask db upgrade
+
+
+
 ### Viewing the app ###
 
     Open the following url on your browser to view swagger documentation
