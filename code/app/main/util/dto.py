@@ -23,3 +23,20 @@ class AuthDto:
             "password": fields.String(required=True, description="The user password "),
         },
     )
+
+
+class CompanyDto:
+    api = Namespace("Company", description="Company for user/customer")
+    campany = api.model(
+        "companies",
+        {
+            "name": fields.String(required=True, description="The name of company"),
+            "address": fields.String(required=True, description="The address "),
+            "city": fields.String(required=True, description="The city "),
+            "state": fields.String(required=True, description="The state "),
+            "zip": fields.String(required=True, description="The zip "),
+            "registration_number": fields.String(required=True, description="The registration_number "),
+            "registration_court": fields.String(required=True, description="The registration_court "),
+            "vat_number": fields.String(required=True, description="The vat_number ")
+        },
+    )

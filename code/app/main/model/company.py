@@ -15,6 +15,7 @@ class Company(db.Model):
     registration_number = db.Column(db.String(255), nullable=False)
     registration_court = db.Column(db.String(255), nullable=False)
     vat_number = db.Column(db.String(255), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
         return "<Company '{}'>".format(self.name)
